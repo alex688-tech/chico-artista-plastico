@@ -1,0 +1,136 @@
+
+body{
+  background-image: none;
+}
+
+h3 {
+  font-family: var(--texto);
+  font-weight: 900;
+  font-size: 30px;
+  color: var(--verde);
+  text-align: center;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+
+.carousel-caption{
+  font-family: var(--texto);
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--branco);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#obrasCarousel {
+  height: 400px;
+}
+
+#obrasCarousel .carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.text-section {
+  font-family: var(--texto);
+  font-weight: 900;
+  font-size: 16px;
+  color: var(--marrom);
+  text-align: center;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-family: var(--texto);
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--verde);
+  max-width: 720px;
+  margin: 0 auto 2rem auto;
+  text-align: justify;
+  white-space: pre-line; /* preserva quebras de linha */
+}
+
+.text-description {
+  font-family: var(--texto);
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--verde);
+  max-width: 720px;
+  margin: 0 auto 0 auto;
+  text-align: justify;
+  white-space: pre-line;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  #obrasCarousel {
+    max-width: 90% !important;
+    height: 300px;
+  }
+
+  #obrasCarousel .carousel-item img {
+    height: 300px;
+  }
+
+  .title-section {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+  }
+
+  .description {
+    max-width: 90%;
+    font-size: 0.8rem;
+    margin: 1rem auto 2rem auto;
+  }
+
+  /* Ajustes para popover em telas menores */
+  .popover {
+    font-size: 0.8rem;
+    max-width: 250px;
+    word-wrap: break-word;
+  }
+
+  .popover-header {
+    font-size: 0.9rem;
+  }
+
+  .popover-body {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #obrasCarousel {
+    height: 250px;
+  }
+
+  #obrasCarousel .carousel-item img {
+    height: 250px;
+  }
+
+  .title-section {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 0.75rem;
+  }
+
+  /* Ajustes adicionais para popover em telas muito pequenas */
+  .popover {
+    font-size: 0.75rem;
+    max-width: 200px;
+  }
+
+  .popover-header {
+    font-size: 0.8rem;
+  }
+
+  .popover-body {
+    font-size: 0.75rem;
+    padding: 0.4rem;
+  }
+}
