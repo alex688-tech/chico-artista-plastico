@@ -17,7 +17,7 @@ h3 {
   font-family: var(--texto);
   font-weight: 500;
   font-size: 20px;
-  color: var(--branco);
+  color: var(--laranja-escuro);
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -62,6 +62,7 @@ h3 {
   text-align: justify;
   white-space: pre-line;
 }
+
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
