@@ -1,6 +1,3 @@
-body{
-  background-image: none;
-}
 
 h3 {
   font-family: var(--texto);
@@ -30,7 +27,29 @@ h3 {
   object-fit: cover;
 }
 
-.text-section {
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 3rem;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  font-family: var(--texto);
+}
+
+main .texto-nature {
+  flex: 1 1 45%;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.6; 
+  color: var(--marrom);
+  margin-top: 15px; 
+}
+
+/*.text-section {
   font-family: var(--texto);
   font-weight: 900;
   font-size: 16px;
@@ -38,18 +57,20 @@ h3 {
   text-align: center;
   line-height: normal;
   margin-bottom: 1rem;
-}
+}*/
 
-.description {
+/*.text-description {
   font-family: var(--texto);
   font-size: 18px;
   font-weight: 900;
   color: var(--verde);
-  max-width: 720px;
-  margin: 0 auto 2rem auto;
-  text-align: justify;
-  white-space: pre-line; /* preserva quebras de linha */
-}
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  text-align: left;  
+  line-height: 1.5;          
+}*/
+
+
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {

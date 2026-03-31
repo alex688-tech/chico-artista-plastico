@@ -1,13 +1,12 @@
-
 body{
   background-image: none;
 }
 
-h3 {
+.pintura {
   font-family: var(--texto);
   font-weight: 900;
   font-size: 30px;
-  color: var(--verde);
+  color: var(--laranja-escuro);
   text-align: center;
   line-height: normal;
   margin-bottom: 1rem;
@@ -28,44 +27,72 @@ h3 {
 
 #obrasCarousel .carousel-item img {
   height: 400px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
-.text-section {
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 3rem;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  font-family: var(--texto);
+}
+
+main .texto-paint {
+  flex: 1 1 45%;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.6; 
+  color: var(--marrom);
+  margin-top: 15px; 
+}
+
+.poema {
+  text-align: center;
+  font-size: 18px;
+  color: var(--laranja-escuro);
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+h5 {
   font-family: var(--texto);
   font-weight: 900;
-  font-size: 16px;
-  color: var(--marrom);
+  font-size: 25px;
+  color: var(--laranja-escuro);
   text-align: center;
   line-height: normal;
   margin-bottom: 1rem;
 }
 
-.description {
-  font-family: var(--texto);
-  font-size: 18px;
-  font-weight: 900;
-  color: var(--verde);
-  max-width: 720px;
-  margin: 0 auto 2rem auto;
-  text-align: justify;
-  white-space: pre-line; /* preserva quebras de linha */
+.poema-box {
+  background-color: var(--branco);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 2rem auto;
+  max-width: 600px;
+  text-align: center;
 }
 
-.text-description {
-  font-family: var(--texto);
-  font-size: 18px;
-  font-weight: 900;
-  color: var(--verde);
-  max-width: 720px;
-  margin: 0 auto 0 auto;
-  text-align: justify;
-  white-space: pre-line;
+.poema-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
+  .carousel-and-text {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   #obrasCarousel {
     max-width: 90% !important;
     height: 300px;
@@ -73,6 +100,7 @@ h3 {
 
   #obrasCarousel .carousel-item img {
     height: 300px;
+    object-fit: contain;
   }
 
   .title-section {
@@ -110,6 +138,7 @@ h3 {
 
   #obrasCarousel .carousel-item img {
     height: 250px;
+    object-fit: contain;
   }
 
   .title-section {
