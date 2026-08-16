@@ -2,165 +2,498 @@ body{
   background-image: none;
 }
 
-.pintura {
-  font-family: var(--texto);
-  font-weight: 900;
-  font-size: 30px;
-  color: var(--laranja-escuro);
-  text-align: center;
-  line-height: normal;
-  margin-bottom: 1rem;
+.text-section {
+    width: 100%;
+    padding: 0.75rem 1rem 0;
 }
 
-.carousel-caption{
-  font-family: var(--texto);
-  font-weight: 500;
-  font-size: 20px;
-  color: var(--laranja-escuro);
-  text-align: center;
-  margin-bottom: 1rem;
+.text-section h3 {
+    font-family: var(--texto);
+    font-weight: 900;
+    font-size: 40px;
+    color: var(--laranja);
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.pagina-natura {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 0 1.5rem;
+
+    font-family: var(--texto);
+}
+
+.obras-section {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto 4rem auto;
 }
 
 #obrasCarousel {
-  height: 400px;
+    width: 100%;
+
+    background-color: transparent;
 }
 
-#obrasCarousel .carousel-item img {
-  height: 400px;
-  object-fit: contain;
+
+.obra-imagem {
+    display: block;
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: contain;
+
+    cursor: zoom-in;
 }
 
-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; 
-  gap: 3rem;
-  margin-bottom: 3rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
-  font-family: var(--texto);
+#obrasCarousel .carousel-control-prev,
+#obrasCarousel .carousel-control-next {
+
+    width: 10%;
 }
 
-main .texto-paint {
-  flex: 1 1 45%;
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 1.6; 
-  color: var(--marrom);
-  margin-top: 15px; 
+
+#obrasCarousel .carousel-control-prev-icon,
+#obrasCarousel .carousel-control-next-icon {
+
+    filter: invert(1);
+}
+
+.obra-informacoes {
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 1rem;
+}
+
+
+.obra-informacoes h4 {
+    font-family: var(--texto);
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--verde);
+    line-height: 1.3;
+    max-width: 650px;
+    margin: 0 auto 0.75rem;
+    padding: 0 1rem;
+}
+
+.ficha-toggle {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 0 auto;
+
+    padding: 0.75rem 0;
+
+    background: none;
+
+    border: none;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    font-family: var(--texto);
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    color: var(--marrom);
+
+    cursor: pointer;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.ficha-toggle:hover {
+    color: var(--verde);
+}
+
+
+.ficha-icon {
+
+    font-size: 1.2rem;
+
+    font-weight: 400;
+}
+
+.ficha-tecnica {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    padding: 1rem 0;
+
+    text-align: center;
+}
+
+
+.ficha-tecnica p {
+
+    margin: 0 0 0.5rem 0;
+
+    font-family: var(--texto);
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    color: var(--marrom);
+}
+
+
+.ficha-tecnica p:last-child {
+
+    margin-bottom: 0;
+}
+
+.texto-serie {
+
+    width: 100%;
+
+    max-width: 760px;
+
+    margin: 0 auto 4rem auto;
+
+    color: var(--marrom);
+}
+
+
+.texto-serie h4 {
+
+    font-family: var(--texto);
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    color: var(--verde);
+
+    text-align: center;
+
+    margin: 0 0 2rem 0;
+}
+
+
+.texto-serie p {
+
+    font-family: var(--texto);
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: var(--marrom);
+
+    line-height: 1.7;
+
+    text-align: left;
+
+    margin: 0 0 1.5rem 0;
+}
+
+
+.texto-serie p:last-child {
+
+    margin-bottom: 0;
 }
 
 .poema {
-  text-align: center;
-  font-size: 18px;
-  color: var(--laranja-escuro);
-  line-height: 1.6;
-  margin-top: 0;
+    max-width: 620px;
+    margin: 3rem auto 0;
 }
 
-h5 {
-  font-family: var(--texto);
-  font-weight: 900;
-  font-size: 25px;
-  color: var(--laranja-escuro);
-  text-align: center;
-  line-height: normal;
-  margin-bottom: 1rem;
+.poema h4 {
+    font-family: var(--texto);
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--verde);
+    margin-bottom: 1.25rem;
+    text-align: center;
 }
 
-.poema-box {
-  background-color: var(--branco);
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 2rem auto;
-  max-width: 600px;
-  text-align: center;
-}
-
-.poema-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .carousel-and-text {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  #obrasCarousel {
-    max-width: 90% !important;
-    height: 300px;
-  }
-
-  #obrasCarousel .carousel-item img {
-    height: 300px;
-    object-fit: contain;
-  }
-
-  .title-section {
+.poema p {
     font-size: 18px;
-    margin-bottom: 0.5rem;
-  }
-
-  .description {
-    max-width: 90%;
-    font-size: 0.8rem;
-    margin: 1rem auto 2rem auto;
-  }
-
-  /* Ajustes para popover em telas menores */
-  .popover {
-    font-size: 0.8rem;
-    max-width: 250px;
-    word-wrap: break-word;
-  }
-
-  .popover-header {
-    font-size: 0.9rem;
-  }
-
-  .popover-body {
-    font-size: 0.8rem;
-    padding: 0.5rem;
-  }
+    font-weight: 600;
+    line-height: 1.8;
+    text-align: center;
+    margin: 0;
 }
+
+#imageModal .modal-dialog {
+
+    max-width: 90vw;
+}
+
+
+#imageModal .modal-content {
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+}
+
+
+#imageModal .modal-body {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 0;
+}
+
+
+#modalImage {
+
+    display: block;
+
+    max-width: 90vw;
+
+    max-height: 90vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .pagina-natura {
+
+        width: 100%;
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-sizing: border-box;
+    }
+
+
+    .obras-section {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    #obrasCarousel {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .obra-imagem {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+     .obra-informacoes {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    .obra-informacoes h4 {
+        font-size: 18px;
+        max-width: 500px;
+        padding: 0 0.75rem;
+    }
+
+
+     .texto-serie {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+    }
+
+    .text-section {
+      padding-top: 0.5rem;
+    }
+
+
+      .text-section h3 {
+        font-size: 24px;
+        margin-bottom: 0.75rem;
+    }
+
+
+    .obras-section {
+
+        width: 100%;
+
+        margin-bottom: 3rem;
+    }
+
+
+    .obra-imagem {
+
+        height: 350px;
+    }
+
+
+    .texto-serie p {
+
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+
+        margin-bottom: 1.4rem;
+    }
+
+
+    .ficha-toggle {
+
+        max-width: 100%;
+    }
+
+
+    .ficha-tecnica {
+
+        max-width: 100%;
+    }
+
+}
+
+
+
+/* =========================================
+   CELULAR
+========================================= */
 
 @media (max-width: 480px) {
-  #obrasCarousel {
-    height: 250px;
-  }
 
-  #obrasCarousel .carousel-item img {
-    height: 250px;
-    object-fit: contain;
-  }
+     .pagina-natura {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 
-  .title-section {
-    font-size: 16px;
-  }
 
-  .description {
-    font-size: 0.75rem;
-  }
+    .obra-imagem {
 
-  /* Ajustes adicionais para popover em telas muito pequenas */
-  .popover {
-    font-size: 0.75rem;
-    max-width: 200px;
-  }
+        height: 280px;
+    }
 
-  .popover-header {
-    font-size: 0.8rem;
-  }
 
-  .popover-body {
-    font-size: 0.75rem;
-    padding: 0.4rem;
-  }
+    .ficha-toggle {
+
+        font-size: 0.9rem;
+
+        padding: 0.7rem 0;
+    }
+
+
+    .ficha-tecnica p {
+
+        font-size: 0.85rem;
+
+        line-height: 1.5;
+    }
+
+    .texto-serie p {
+
+        font-size: 0.9rem;
+
+        line-height: 1.65;
+
+        margin-bottom: 1.3rem;
+    }
+
+     .poema {
+        margin-top: 2rem;
+    }
+
+    .poema h4 {
+        font-size: 19px;
+        margin-bottom: 1rem;
+    }
+
+    .texto-serie .poema p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+
+   #modalImage {
+    display: block;
+    max-width: 95vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+#imageModal .modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#imageModal .modal-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#imageModal .modal-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 }

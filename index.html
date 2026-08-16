@@ -15,49 +15,76 @@
 <body>
 
     <header id="home">
-        <div class="header-content">
-             <h1 class="artist-title">
-      CHICO NASCIMENTO <br />
-      ARTISTA PLÁSTICO
-    </h1>
-        </div>
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container-fluid custom-navbar-container">
+                <button class="navbar-toggler order-first" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a href="./index.html" class="header-logo-link">
+                    <img src="./img/logo.png" alt="Chico Nascimento Artista Plástico" class="header-logo">
+                </a>
+
+                <div class="offcanvas-lg offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#navbarNav" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body justify-content-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./about.html">Conheça o artista</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Meus trabalhos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./natura.html">Natura et Artificialis</a></li>
+                                    <li><a class="dropdown-item" href="./pinturas.html">Pinturas de Projeção</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./publicações.html">Notícias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contato.html">Entre em contato</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
+    <!---<picture>
+        <source srcset="./img/pintura de projeção/PROJEÇÃO 05 -2018.jpg" media="(min-width: 360px)">
+    <img
+        src="./img/pintura de projeção/PROJEÇÃO 12 -2018.jpg"
+        alt="Chico Nascimento Artista Plástico"
+        class="gray-box">
+</picture>-->
 
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid justify-content-center">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./about.html">Conheça o artista</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Meus trabalhos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./natura.html">Natura et Artificialis</a></li>
-                            <li><a class="dropdown-item" href="./pinturas.html">Pinturas de Projeção</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./publicações.html">Notícias</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contato.html">Entre em contato</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<main class="home-main">
+    <section class="home-hero" aria-label="Obra em destaque">
+        <picture class="home-hero-picture">
+            <!-- Imagem específica para celular -->
+            <source
+                srcset="../img/pintura de projeção/PROJEÇÃO 12 -2018.jpg"
+                media="(max-width: 767px)"
+            >
 
-    <img src="./img/pintura de projeção/azul.jpg" alt="Chico Nascimento Artista Plástico" class="gray-box">
+            <!-- Imagem usada em tablet e desktop -->
+            <img
+                src="./img/pintura de projeção/PROJEÇÃO 12 -2018.jpg"
+                alt="Obra de Chico Nascimento"
+                class="home-hero-image"
+            >
+        </picture>
+    </section>
+</main>
 
 
 

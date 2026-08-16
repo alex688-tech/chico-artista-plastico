@@ -23,7 +23,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--branco);
-  background-image: url('../img/mancha\ amarelada.png');
+  background-image: url('../img/MARCA\ D\ AGUA.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,30 +31,52 @@ body {
 }
 
 
-h1 {
-  text-align: center;
-  font-size: var(--titulo);
-  color: var(--laranja-escuro);
-  font-weight: 900;
-  font-size: 40px;
-  margin: 2rem 0 1rem 0;
-  line-height: 1.2;
+.header-logo {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  /* Altura máxima reduzida para um tamanho mais "normal" */
+  max-height: 130px;
 }
 
+/* Link que envolve a logo (index.html) */
+.header-logo-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
 
 nav {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-bottom: 0.5rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
   font-family: var(--texto);
   font-weight: 700;
   font-size: 20px;
 }
 
-nav a {
+/* Navbar personalizada (header + menu unificados) */
+.custom-navbar .container-fluid {
+  gap: 1rem;
+}
+
+.custom-navbar .artist-title {
+  font-size: 40px;
+  margin: 2rem auto 1rem auto;
+}
+
+nav .nav-link {
   text-decoration: none;
-  color: var(--marrom);
+  color: var(--marrom) !important;
+  font-family: var(--texto) !important;
+  font-weight: 700 !important;
+  
+  /* AUMENTANDO O TAMANHO E O CORPO */
+  font-size: 26px !important; /* Mudei para 26px para ficar bem visível, ajuste se quiser ainda maior */
+  padding: 15px 25px !important;
+
   position: relative;
   cursor: pointer;
   opacity: 1;
@@ -65,20 +87,21 @@ nav a:hover {
 }
 
 .dropdown-item {
-  color: var(--marrom);
+  color: var(--marrom) !important;
   font-family: var(--texto);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 20px; /* Ligeiramente menor para o submenu fazer sentido visualmente */
+  padding: 8px 20px;
 }
 
-.dropdown-menu :hover {
-  color: var(--laranja-escuro);
+.dropdown-menu .dropdown-item:hover {
+  color: var(--laranja-escuro) !important;
+  background-color: transparent; /* Remove o fundo cinza padrão do Bootstrap no hover */
 }
 
-nav li {
-  list-style: none;
-  position: relative;
-  display: inline-block;
+nav .navbar-nav {
+  gap: 2rem; 
+  align-items: center;
 }
 
 
@@ -96,12 +119,36 @@ nav ul.dropdown-menu {
   z-index: 100;
 }
 
-.gray-box {
+
+.home-main {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.home-hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-hero-picture {
+  display: block;
+  width: 100%;
+}
+
+.home-hero-image {
+  display: block;
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*.gray-box {
   width: 100%;
   height: 580px;
   object-fit: cover;
   margin-bottom: 3rem;
-}
+}*/
 
 nav ul {
   padding: 0;
@@ -166,15 +213,20 @@ footer a:hover {
     background-position: center;
   }*/
 
-  h1 {
-    font-size: 30px;
+  .header-logo {
+    max-height: 130px;
   }
 
 
-  .gray-box {
+   .home-hero-image {
+    height: clamp(380px, 62vh, 560px);
+    object-position: center;
+   }
+
+  /*.gray-box {
     height: 50vh;
     min-height: 300px;
-  }
+  }*/
 
   footer {
     flex-direction: column;
@@ -192,29 +244,185 @@ footer a:hover {
     font-size: 1.5rem;
   }
 
+}
+
 @media (max-width: 480px) {
-  /*body {
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: center;
-  }*/
-
-  h1 {
-    font-size: 24px;
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
-  .gray-box {
-    height: 40vh;
-    min-height: 250px;
+  .home-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
   }
 
-  footer {
-    font-size: 12px;
+  .home-hero {
+    width: 100%;
+    padding: 0 0.75rem;
   }
 
-  footer a .bi {
-    font-size: 1.25rem;
+  .home-hero-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+   footer > div {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  footer p {
+    max-width: 220px;
+    margin: 0;
+  }
+  
+}
+
+/* Desktop (lg+): logo/título centralizados em cima e menu centralizado embaixo */
+@media (min-width: 992px) {
+  .custom-navbar {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .custom-navbar .container-fluid {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-logo-link {
+    margin: 50px auto 0 auto;
+  }
+
+  .header-logo {
+    margin: 0 auto;
+    max-height: 130px;
+  }
+
+  .custom-navbar .offcanvas-lg {
+    width: 100%;
+    flex-grow: 0;
+    justify-content: center;
+  }
+
+  .custom-navbar .offcanvas-body {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 }
 
+/* Mobile (<992px): hambúrguer à esquerda, logo/título ao lado e mini aba lateral */
+@media (max-width: 991.98px) {
+  .custom-navbar {
+    margin-top: 18px;
+    margin-bottom: 15px;
+  }
+
+  .custom-navbar .container-fluid {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .custom-navbar .navbar-toggler {
+    border: none;
+    box-shadow: none;
+    color: var(--marrom);
+    padding: 0.25rem 0.4rem;
+  }
+
+  /* Logo ao lado do hambúrguer */
+  .header-logo-link {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .header-logo {
+    max-height: 65px;
+    margin: 0;
+  }
+
+  /* Título ao lado do hambúrguer */
+  .custom-navbar .header-content {
+    margin: 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .custom-navbar .artist-title {
+    font-size: 1.25rem;
+    line-height: 1.15;
+    margin: 0;
+    text-align: left;
+  }
+
+  /* Mini aba lateral (offcanvas) */
+  .offcanvas-lg {
+    --bs-offcanvas-width: 290px;
+  }
+
+  .custom-navbar .offcanvas-lg {
+    background-color: var(--branco);
+  }
+
+  .custom-navbar .offcanvas-header {
+    border-bottom: 1px solid var(--amarelo-claro);
+    margin-bottom: 0.5rem;
+  }
+
+  .custom-navbar .offcanvas-title {
+    color: var(--laranja-escuro);
+    font-weight: 700;
+  }
+
+  .custom-navbar .offcanvas-body {
+    padding: 1rem;
+  }
+
+  .custom-navbar .offcanvas-body .navbar-nav {
+    gap: 0.15rem;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .custom-navbar .nav-link {
+    font-size: 20px !important;
+    padding: 0.6rem 0.75rem !important;
+    text-align: left;
+    border-radius: 6px;
+  }
+
+  .custom-navbar .nav-link:hover,
+  .custom-navbar .nav-link:focus {
+    background-color: var(--amarelo-claro);
+  }
+
+  .custom-navbar .offcanvas-body .dropdown-menu {
+    position: static !important;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .custom-navbar .dropdown-item {
+    font-size: 16px;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .custom-navbar .dropdown-menu {
+    padding-left: 0.5rem;
+  }
 }

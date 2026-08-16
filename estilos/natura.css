@@ -1,145 +1,463 @@
-
-h3 {
-  font-family: var(--texto);
-  font-weight: 900;
-  font-size: 30px;
-  color: var(--verde);
-  text-align: center;
-  line-height: normal;
-  margin-bottom: 1rem;
+body{
+  background-image: none;
 }
 
-.carousel-caption{
-  font-family: var(--texto);
-  font-weight: 500;
-  font-size: 20px;
-  color: var(--laranja-escuro);
-  text-align: center;
-  margin-bottom: 1rem;
+
+.text-section {
+    width: 100%;
+    padding: 0.75rem 1rem 0;
+}
+
+.text-section h3 {
+    font-family: var(--texto);
+    font-weight: 900;
+    font-size: 40px;
+    color: var(--laranja);
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.pagina-natura {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 0 1.5rem;
+
+    font-family: var(--texto);
+}
+
+.obras-section {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto 4rem auto;
 }
 
 #obrasCarousel {
-  height: 400px;
+    width: 100%;
+
+    background-color: transparent;
 }
 
-#obrasCarousel .carousel-item img {
-  height: 400px;
-  object-fit: cover;
+
+.obra-imagem {
+    display: block;
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: contain;
+
+    cursor: zoom-in;
 }
 
-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; 
-  gap: 3rem;
-  margin-bottom: 3rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
-  font-family: var(--texto);
+.obra-horizontal {
+    height: 420px;
 }
 
-main .texto-nature {
-  flex: 1 1 45%;
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 1.6; 
-  color: var(--marrom);
-  margin-top: 15px; 
+#obrasCarousel .carousel-control-prev,
+#obrasCarousel .carousel-control-next {
+
+    width: 10%;
 }
 
-/*.text-section {
-  font-family: var(--texto);
-  font-weight: 900;
-  font-size: 16px;
-  color: var(--marrom);
-  text-align: center;
-  line-height: normal;
-  margin-bottom: 1rem;
-}*/
 
-/*.text-description {
-  font-family: var(--texto);
-  font-size: 18px;
-  font-weight: 900;
-  color: var(--verde);
-  max-width: 600px;
-  margin: 0 auto 1.5rem auto;
-  text-align: left;  
-  line-height: 1.5;          
-}*/
+#obrasCarousel .carousel-control-prev-icon,
+#obrasCarousel .carousel-control-next-icon {
+
+    filter: invert(1);
+}
+
+.obra-informacoes {
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 1rem;
+}
 
 
+.obra-informacoes h4 {
+    font-family: var(--texto);
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--verde);
+    line-height: 1.3;
+    max-width: 650px;
+    margin: 0 auto 0.75rem;
+    padding: 0 1rem;
+}
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  #obrasCarousel {
-    max-width: 90% !important;
-    height: 300px;
-  }
+.ficha-toggle {
 
-  #obrasCarousel .carousel-item img {
-    height: 300px;
-  }
+    width: 100%;
 
-  .title-section {
-    font-size: 18px;
-    margin-bottom: 0.5rem;
-  }
+    max-width: 500px;
 
-  .description {
-    max-width: 90%;
-    font-size: 0.8rem;
-    margin: 1rem auto 2rem auto;
-  }
+    display: flex;
 
-  /* Ajustes para popover em telas menores */
-  .popover {
-    font-size: 0.8rem;
-    max-width: 250px;
-    word-wrap: break-word;
-  }
+    justify-content: center;
 
-  .popover-header {
+    align-items: center;
+
+    margin: 0 auto;
+
+    padding: 0.75rem 0;
+
+    background: none;
+
+    border: none;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    font-family: var(--texto);
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    color: var(--marrom);
+
+    cursor: pointer;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.ficha-toggle:hover {
+    color: var(--verde);
+}
+
+.ficha-tecnica {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    padding: 1rem 0;
+
+    text-align: center;
+}
+
+
+.ficha-tecnica p {
+
+    margin: 0 0 0.5rem 0;
+
+    font-family: var(--texto);
+
     font-size: 0.9rem;
-  }
 
-  .popover-body {
-    font-size: 0.8rem;
-    padding: 0.5rem;
-  }
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    color: var(--marrom);
 }
+
+
+.ficha-tecnica p:last-child {
+
+    margin-bottom: 0;
+}
+
+.texto-serie {
+
+    width: 100%;
+
+    max-width: 760px;
+
+    margin: 0 auto 4rem auto;
+
+    color: var(--marrom);
+}
+
+
+.texto-serie h4 {
+
+    font-family: var(--texto);
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    color: var(--verde);
+
+    text-align: center;
+
+    margin: 0 0 2rem 0;
+}
+
+
+.texto-serie p {
+
+    font-family: var(--texto);
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: var(--marrom);
+
+    line-height: 1.7;
+
+    text-align: left;
+
+    margin: 0 0 1.5rem 0;
+}
+
+
+.texto-serie p:last-child {
+
+    margin-bottom: 0;
+}
+
+#imageModal .modal-dialog {
+
+    max-width: 90vw;
+}
+
+
+#imageModal .modal-content {
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+}
+
+
+#imageModal .modal-body {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 0;
+}
+
+
+#modalImage {
+
+    display: block;
+
+    max-width: 90vw;
+
+    max-height: 90vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .pagina-natura {
+
+        width: 100%;
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-sizing: border-box;
+    }
+
+
+    .obras-section {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-sizing: border-box;
+        margin-bottom: 3rem;
+    }
+
+    #obrasCarousel {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .obra-imagem {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+     .obra-informacoes {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    .obra-informacoes h4 {
+        font-size: 18px;
+        max-width: 500px;
+        padding: 0 0.75rem;
+    }
+
+     .texto-serie {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+    }
+
+    .text-section {
+        padding-top: 0.5rem;
+    }
+
+    .text-section h3 {
+        font-size: 24px;
+        margin-bottom: 0.75rem;
+    }
+
+
+    .obras-section {
+
+        width: 100%;
+
+        margin-bottom: 3rem;
+    }
+
+
+    .obra-imagem {
+
+        height: 350px;
+    }
+
+
+    .texto-serie p {
+
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+
+        margin-bottom: 1.4rem;
+    }
+
+
+    .ficha-toggle {
+
+        max-width: 100%;
+    }
+
+
+    .ficha-tecnica {
+
+        max-width: 100%;
+    }
+
+}
+
+
+
+/* =========================================
+   CELULAR
+========================================= */
 
 @media (max-width: 480px) {
-  #obrasCarousel {
-    height: 250px;
-  }
 
-  #obrasCarousel .carousel-item img {
-    height: 250px;
-  }
+     .pagina-natura {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 
-  .title-section {
-    font-size: 16px;
-  }
 
-  .description {
-    font-size: 0.75rem;
-  }
+    .obra-imagem {
 
-  /* Ajustes adicionais para popover em telas muito pequenas */
-  .popover {
-    font-size: 0.75rem;
-    max-width: 200px;
-  }
+        height: 280px;
+    }
 
-  .popover-header {
-    font-size: 0.8rem;
-  }
+    .obra-horizontal {
+        height: 220px;
+    }
 
-  .popover-body {
-    font-size: 0.75rem;
-    padding: 0.4rem;
-  }
+
+    .ficha-toggle {
+
+        font-size: 0.9rem;
+
+        padding: 0.7rem 0;
+    }
+
+
+    .ficha-tecnica p {
+
+        font-size: 0.85rem;
+
+        line-height: 1.5;
+    }
+
+    .texto-serie p {
+
+        font-size: 0.9rem;
+
+        line-height: 1.65;
+
+        margin-bottom: 1.3rem;
+    }
+
+
+   #modalImage {
+    display: block;
+    max-width: 95vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+#imageModal .modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#imageModal .modal-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#imageModal .modal-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 }

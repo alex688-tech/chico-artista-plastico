@@ -1,15 +1,355 @@
 
 
-body{
+body {
   background-color: var(--branco);
-  background-image: url('../img/mancha\ amarelada.png');
+  background-image: url('../img/MARCA\ D\ AGUA.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-main {
+main.about-page {
+  display: block;
+  width: min(1180px, calc(100% - 48px));
+  max-width: none;
+  margin: 0 auto;
+  padding: 40px 0 80px;
+  font-family: var(--texto);
+  color: var(--marrom);
+}
+
+/* Página */
+
+.about-page {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 40px 0 80px;
+  font-family: var(--texto);
+  color: var(--marrom);
+}
+
+/* Apresentação inicial */
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+  align-items: center;
+  gap: clamp(40px, 7vw, 96px);
+  margin-bottom: 80px;
+}
+
+.about-intro {
+  max-width: 650px;
+}
+
+.about-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--laranja-escuro);
+  font-family: var(--texto);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-intro h1 {
+  margin: 0 0 24px;
+  color: var(--laranja-escuro);
+  font-family: var(--titulo);
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 900;
+  line-height: 1.05;
+  text-align: left;
+}
+
+.about-intro p {
+  max-width: 62ch;
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.about-intro .about-lead {
+  color: var(--verde);
+  font-size: clamp(20px, 2vw, 25px);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* Foto */
+
+.about-photo {
+  margin: 0;
+}
+
+.about-photo-frame {
+  position: relative;
+}
+
+.about-photo-frame::before {
+  display: none;
+}
+
+.about-photo-frame img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+.about-photo figcaption {
+  margin-top: 10px;
+  color: var(--marrom);
+  font-family: var(--texto);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: right;
+}
+
+/* Blocos de conteúdo */
+
+.about-content {
+  width: min(900px, 100%);
+  margin: 0 auto;
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  gap: 28px;
+  padding: 42px 0;
+  border-top: 1px solid rgba(38, 26, 26, 0.2);
+}
+
+.about-number {
+  color: var(--laranja);
+  font-family: var(--titulo);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.about-section h2 {
+  margin: 0 0 20px;
+  color: var(--verde);
+  font-family: var(--titulo);
+  font-size: clamp(25px, 3vw, 34px);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.about-section p {
+  max-width: 70ch;
+  margin: 0 0 18px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.about-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Convite final */
+
+.about-invitation {
+  width: min(900px, 100%);
+  margin: 40px auto 0;
+  padding: clamp(28px, 5vw, 48px);
+  background-color: rgba(202, 75, 2, 0.1);
+  border-left: 5px solid var(--laranja-escuro);
+  border-radius: 0 10px 10px 0;
+}
+
+.about-invitation p {
+  margin: 0 0 12px;
+  font-size: clamp(19px, 2vw, 24px);
+  line-height: 1.5;
+}
+
+.about-invitation > strong {
+  color: var(--laranja-escuro);
+  font-size: 18px;
+}
+
+/* Tablet e mobile */
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .about-page {
+    width: min(100% - 32px, 620px);
+    padding: 24px 0 56px;
+  }
+
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 56px;
+  }
+
+  .about-intro {
+    display: contents;
+  }
+
+  .about-label {
+    margin-bottom: -20px;
+  }
+
+  .about-intro h1 {
+    margin-bottom: -10px;
+    font-size: clamp(34px, 10vw, 48px);
+  }
+
+  .about-photo {
+    order: 3;
+    width: min(100%, 430px);
+    margin: 0 auto;
+  }
+
+   .about-photo figcaption {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .about-photo::before {
+    inset: 12px -12px -12px 12px;
+  }
+
+  .about-intro .about-lead {
+    order: 4;
+    margin-top: 12px;
+  }
+
+  .about-intro p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 34px 0;
+  }
+
+  .about-number {
+    font-size: 14px;
+  }
+
+  .about-section p {
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .about-invitation {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    width: calc(100% - 28px);
+  }
+
+  .about-photo {
+    width: calc(100% - 12px);
+  }
+
+  .about-section h2 {
+    font-size: 25px;
+  }
+
+  .about-section p,
+  .about-intro p {
+    font-size: 16px;
+  }
+
+  .about-invitation {
+    padding: 24px 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*main {
   display: flex;
   justify-content: space-between;
   align-items: flex-start; 
@@ -31,7 +371,7 @@ h3{
 
 main .texto {
   flex: 1 1 45%;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 18px;
   line-height: 1.6; 
   color: var(--marrom);
@@ -67,7 +407,7 @@ main .caixa-cinza img {
 }
 
 .strong{
-  color: var(--verde);
+  color: var(--verde) !important; 
 }
 
 @media (max-width: 768px) {
@@ -82,7 +422,7 @@ main .caixa-cinza img {
     margin-top: 0;
   }
   
-  /* Imagem acima do texto no mobile, centralizada */
+  /* Imagem acima do texto no mobile, centralizada 
   main .caixa-cinza{
     order: 1;
     aspect-ratio: 1 / 1;
@@ -100,7 +440,7 @@ main .caixa-cinza img {
   /* Se você usa .grey-box como um DIVISOR, mantenha, mas ajuste. */
   /* Se você usa .grey-box como o ELEMENTO IMAGEM (grande), você tem dois elementos iguais! */
   
-  /* Vou assumir que main .texto .grey-box era apenas um divisor: */
+  /* Vou assumir que main .texto .grey-box era apenas um divisor: 
   main .texto .grey-box{
     height: 2px;
     width: 80px;
@@ -108,7 +448,7 @@ main .caixa-cinza img {
     order: -1;
   }
 
-  /* Ajuste no .popover, etc... (mantido) */
+  /* Ajuste no .popover, etc... (mantido) 
     .popover {
     font-size: 0.8rem;
     max-width: 250px;
@@ -147,6 +487,6 @@ main .caixa-cinza img {
     padding: 0.4rem;
   }
 
-}
+}/*
 
 
