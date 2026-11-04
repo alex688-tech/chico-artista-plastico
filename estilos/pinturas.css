@@ -497,3 +497,87 @@ body{
 }
 
 }
+
+
+@media (max-width: 480px) {
+
+  /* Mesma margem lateral usada na foto */
+  #home .custom-navbar .custom-navbar-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 0 0.75rem;
+  }
+
+  /* Menu alinhado à borda esquerda da foto */
+  #home .custom-navbar .navbar-toggler {
+    position: absolute;
+    left: 0.75rem;
+    top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    z-index: 2;
+  }
+
+  
+  /* Logo e frase centralizadas, com espaço para o menu */
+  #home .custom-navbar .header-identidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: calc(100% - 80px);
+    max-width: 255px;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  #home .custom-navbar .header-logo-link {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #home .custom-navbar .header-logo {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    max-height: none;
+    margin: 0;
+  }
+
+  #home .custom-navbar .header-subtitulo {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  #home .custom-navbar .header-logo-subtitulo {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 4px 0 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+}
