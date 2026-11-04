@@ -58,9 +58,9 @@ body {
     text-decoration: none;
     font-family: var(--texto);
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     color: var(--laranja);
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
 }
 
 
@@ -91,9 +91,9 @@ nav .nav-link {
   font-family: var(--texto) !important;
   font-weight: 700 !important;
   
-  /* AUMENTANDO O TAMANHO E O CORPO */
-  font-size: 26px !important; /* Mudei para 26px para ficar bem visível, ajuste se quiser ainda maior */
-  padding: 15px 25px !important;
+  font-size: 21px !important;
+  padding: 12px 10px !important;
+  white-space: nowrap;
 
   position: relative;
   cursor: pointer;
@@ -118,7 +118,7 @@ nav a:hover {
 }
 
 nav .navbar-nav {
-  gap: 2rem; 
+  gap: 1.2rem; 
   align-items: center;
 }
 
@@ -316,7 +316,7 @@ footer {
     margin: 0 auto;
     width: auto;
     max-width: 100%;
-    max-height: 105px;
+    max-height: 80px;
 }
 
   .custom-navbar .offcanvas-lg {
